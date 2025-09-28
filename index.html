@@ -4,27 +4,20 @@
   <meta charset="UTF-8">
   <title>Grace Kitonyi Portfolio</title>
   <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Body & Background */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #6a11cb, #2575fc); /* colorful gradient */
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
       color: #fff;
       min-height: 100vh;
       overflow-x: hidden;
+      margin: 0;
     }
 
-    /* Navigation Bar */
     nav {
       display: flex;
-      justify-content: flex-end;
-      padding: 20px 50px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
       background: rgba(0,0,0,0.3);
       position: fixed;
       width: 100%;
@@ -48,13 +41,19 @@
       transform: translateY(-3px);
     }
 
-    /* Hero Section */
+    .nav-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
     .hero {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 100vh;
-      padding: 0 50px;
+      padding: 120px 50px 50px 50px; /* moved down below nav */
     }
 
     .hero-text {
@@ -62,16 +61,18 @@
       animation: fadeInLeft 1.5s ease;
     }
 
-    .hero-text h1 {
+    h1 {
       font-size: 48px;
-      margin-bottom: 20px;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      color: #ffd700; /* brighter color for visibility */
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      margin: 0;
     }
 
-    .hero-text p {
-      font-size: 20px;
-      line-height: 1.6;
+    h2 {
+      font-size: 24px;
+      margin-top: 15px;
+      color: #ffdd59;
+      min-height: 30px;
     }
 
     .hero-img {
@@ -81,7 +82,6 @@
       animation: fadeInRight 1.5s ease;
     }
 
-    /* Animations */
     @keyframes fadeInLeft {
       from {opacity: 0; transform: translateX(-50px);}
       to {opacity: 1; transform: translateX(0);}
@@ -92,7 +92,6 @@
       to {opacity: 1; transform: translateX(0);}
     }
 
-    /* Buttons (optional) */
     .btn {
       display: inline-block;
       padding: 12px 25px;
@@ -110,7 +109,6 @@
       transform: scale(1.05);
     }
 
-    /* Responsive */
     @media screen and (max-width: 900px) {
       .hero {
         flex-direction: column;
@@ -125,27 +123,77 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation with Photo -->
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
-    <a href="contact.html">Contact</a>
+    <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" alt="Grace Kitonyi" class="nav-photo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-text">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Applied Mathematics ⚡ Data Science 📊 Cybersecurity 🔐 Mathematical Modeling 🧮  
-      <br>Exploring AI-driven solutions for health & security</p>
+      <h1 id="name"></h1>
+      <h2 id="specialization"></h2>
       <a class="btn" href="projects.html">See My Work</a>
     </div>
     <div class="hero-img">
-      <!-- Replace the link below with your actual photo -->
-      <img src="https://via.placeholder.com/300" alt="Grace Kitonyi" class="hero-img">
+      <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" alt="Grace Kitonyi" class="hero-img">
     </div>
   </section>
 
+  <!-- Typing Animation -->
+  <script>
+    const nameText = "Grace Kitonyi";
+    const specializations = [
+      "Applied Mathematics ⚡",
+      "Data Science 📊",
+      "Cybersecurity 🔐",
+      "Mathematical Modeling 🧮",
+      "AI-driven solutions for health & security"
+    ];
+
+    const nameElement = document.getElementById('name');
+    const specElement = document.getElementById('specialization');
+
+    let nameIndex = 0;
+    let specIndex = 0;
+
+    function typeName() {
+      if (nameIndex < nameText.length) {
+        nameElement.innerHTML += nameText.charAt(nameIndex);
+        nameIndex++;
+        setTimeout(typeName, 150);
+      } else {
+        setTimeout(typeSpecialization, 500);
+      }
+    }
+
+    function typeSpecialization() {
+      let currentSpec = specializations[specIndex];
+      let charIndex = 0;
+
+      function typeChar() {
+        if (charIndex < currentSpec.length) {
+          specElement.innerHTML += currentSpec.charAt(charIndex);
+          charIndex++;
+          setTimeout(typeChar, 100);
+        } else {
+          setTimeout(() => {
+            specElement.innerHTML = "";
+            specIndex = (specIndex + 1) % specializations.length;
+            typeSpecialization();
+          }, 1500);
+        }
+      }
+      typeChar();
+    }
+
+    typeName();
+  </script>
 </body>
 </html>
