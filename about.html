@@ -2,22 +2,169 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About Me - Grace Kitonyi</title>
+  <title>About Grace Kitonyi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      background: rgba(0,0,0,0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+      transform: translateY(-3px);
+    }
+
+    .nav-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .container {
+      padding: 120px 50px 50px 50px; /* moved down to clear nav */
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    h1 {
+      color: #6a0572;
+      font-size: 48px;
+    }
+
+    h2 {
+      color: #d7263d;
+      font-size: 32px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      animation: fadeUp 2s ease;
+    }
+
+    .section h3 {
+      color: #333;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @media screen and (max-width: 900px) {
+      .container {
+        padding: 150px 20px 50px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="contact.html">Contact</a>
+    <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" alt="Grace Kitonyi" class="nav-photo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
-  <!-- About Section -->
-  <h1>About Me</h1>
-  <p>Hello 👋, I am <strong>Grace Kitonyi</strong>.</p>
-  <p>I am passionate about <b>Applied Mathematics</b>, <b>Data Science</b>, <b>Cybersecurity</b>, and <b>Mathematical Modeling</b>.</p>
-  <p>Education: BSc in Mathematics (University of Nairobi), currently pursuing advanced studies at AIMS Rwanda.</p>
-  <p>Professionalism: Mastercard Foundation Scholar, exploring AI-driven solutions for health & security 🚀.</p>
+  <!-- Main content -->
+  <div class="container">
+
+    <h1>About Me</h1>
+    <div class="section">
+      <h3>Personal Information</h3>
+      <ul>
+        <li><strong>Name:</strong> Grace Kitonyi</li>
+        <li><strong>Profession:</strong> Mathematician & MSc Mathematical Epidemiology | Data Analyst | Cybersecurity & AI Enthusiast | Lecturer & Researcher</li>
+        <li><strong>Location:</strong> Nairobi, Kenya / Delhi, India</li>
+        <li><strong>Contact:</strong> grace.kitonyi@aims.ac.rw</li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/grace-kitonyi-88143429b" target="_blank">Grace Kitonyi</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Education</h3>
+      <ul>
+        <li><strong>University of Nairobi:</strong> BSc Applied Mathematics (2021–2025)</li>
+        <li><strong>Kenyatta University:</strong> Cybersecurity Course (Ongoing)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Experience</h3>
+      <ul>
+        <li>Lecturer at Delhi College – delivering applied mathematics & epidemiology courses</li>
+        <li>Private Mathematics Tutor – British Curriculum (O & A Levels)</li>
+        <li>Data Analyst at Diakonia – data analysis, visualization, and modeling</li>
+        <li>Community Digital Champion – digital literacy & cybersecurity awareness</li>
+        <li>Quality Assurance & Data Verifier at CPHRM GROUP</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>Skills & Interests</h3>
+      <ul>
+        <li>Mathematical Modeling, Data Science, AI, Cybersecurity</li>
+        <li>Research & Education</li>
+        <li>Python, R, LaTeX, Linux</li>
+      </ul>
+    </div>
+
+  </div>
+
 </body>
 </html>
