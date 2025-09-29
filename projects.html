@@ -2,30 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Projects - Grace Kitonyi</title>
+  <title>Grace Kitonyi | Projects</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      background: rgba(0,0,0,0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    .nav-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .container {
+      padding: 120px 50px 50px 50px; /* below nav */
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #6a0572;
+      font-size: 48px;
+      margin-bottom: 40px;
+      animation: fadeIn 2s ease;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+      animation: fadeUp 1.5s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .project-card h3 {
+      color: #d7263d;
+      margin-bottom: 10px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      text-decoration: none;
+      background-color: #6a0572;
+      color: #fff;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .project-card a:hover {
+      background-color: #d7263d;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  <!-- Navigation -->
   <nav>
-    <a href="index.html">Home</a> |
-    <a href="about.html">About</a> |
-    <a href="projects.html">Projects</a> |
-    <a href="contact.html">Contact</a>
+    <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" alt="Grace Kitonyi" class="nav-photo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </nav>
 
-  <!-- Projects Section -->
-  <h1>My Projects 🚀</h1>
+  <div class="container">
+    <h1>My Projects</h1>
 
-  <h2>1. Mathematical Modelling of Diabetes Progression</h2>
-  <p>This project explores how mathematical models can describe the progression of diabetes and suggest control strategies. It combines applied mathematics with health research.</p>
+    <div class="projects-grid">
 
-  <h2>2. WebGuard 🔐</h2>
-  <p>An automated web vulnerability scanner and penetration tester based on OWASP Top 20 vulnerabilities. Designed to help improve cybersecurity practices.</p>
+      <div class="project-card">
+        <h3>Mathematical Modelling of Diabetes</h3>
+        <p>Simulation and evaluation of diabetes progression using applied mathematics and computational techniques.</p>
+        <a href="#">View Project</a>
+      </div>
 
-  <h2>3. Data Science & Machine Learning Projects 📊</h2>
-  <p>Various notebooks and experiments using Python, R, and MATLAB to analyze data and create predictive models.</p>
+      <div class="project-card">
+        <h3>Automated Web Vulnerability Scanner</h3>
+        <p>Cybersecurity tool scanning websites for vulnerabilities based on OWASP Top 10 standards.</p>
+        <a href="#">View Project</a>
+      </div>
 
-  <h2>4. Daily Reports (AIMS Rwanda)</h2>
-  <p>A collection of coding exercises, notes, and progress reports from the PyPro-SCiDaS course.</p>
+      <div class="project-card">
+        <h3>Python Data Science Notebooks</h3>
+        <p>Projects in Python for data analysis, visualization, and machine learning applications.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>R Programming Projects</h3>
+        <p>Statistical modeling and analysis using R, including applied research projects.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>LaTeX & Scientific Writing</h3>
+        <p>Documentation, reports, and professional formatting for scientific projects using LaTeX.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Linux & System Programming</h3>
+        <p>Command-line tools, shell scripting, and system-level programming projects in Linux.</p>
+        <a href="#">View Project</a>
+      </div>
+
+    </div>
+
+  </div>
+
 </body>
 </html>
