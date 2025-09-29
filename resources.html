@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grace Kitonyi | Resources</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+      color: #333;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 50px;
+      background: rgba(0,0,0,0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover { color: #ffd700; }
+
+    .nav-photo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+    }
+
+    .container {
+      padding: 120px 50px 50px 50px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h1 { text-align: center; color: #6a0572; margin-bottom: 40px; }
+
+    /* Category cards grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .card h3 { color: #d7263d; margin-bottom: 10px; }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      text-decoration: none;
+      background-color: #6a0572;
+      color: #fff;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+    .card a:hover { background-color: #d7263d; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" class="nav-photo" alt="Grace Kitonyi">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Learning Resources & Books</h1>
+
+    <div class="grid">
+      <!-- Linux -->
+      <div class="card">
+        <h3>Linux</h3>
+        <p>Books, tutorials, and guides for Linux systems and shell scripting.</p>
+        <a href="#">View Linux Resources</a>
+      </div>
+
+      <!-- Python -->
+      <div class="card">
+        <h3>Python</h3>
+        <p>Python books and notebooks for data science, AI, and applied mathematics.</p>
+        <a href="#">View Python Resources</a>
+      </div>
+
+      <!-- R -->
+      <div class="card">
+        <h3>R Programming</h3>
+        <p>Statistical analysis, data visualization, and applied research in R.</p>
+        <a href="#">View R Resources</a>
+      </div>
+
+      <!-- LaTeX -->
+      <div class="card">
+        <h3>LaTeX</h3>
+        <p>Templates, documentation, and scientific writing resources using LaTeX.</p>
+        <a href="#">View LaTeX Resources</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
