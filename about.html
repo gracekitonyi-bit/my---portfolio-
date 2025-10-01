@@ -11,18 +11,22 @@
       margin: 0;
       padding: 0;
     }
+
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 50px;
-      background: rgba(0,0,0,0.3);
+      padding: 15px 50px; /* slightly bigger padding */
+      background: rgba(0,0,0,0.6); /* darker for contrast */
       position: fixed;
       width: 100%;
       top: 0;
+      left: 0;
+      z-index: 1000;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
@@ -40,14 +44,21 @@
     }
 
     .container {
-      padding: 120px 50px;
+      padding: 160px 50px 50px; /* increased top padding so text never overlaps nav */
       max-width: 1000px;
       margin: auto;
     }
 
-    h1 { color: #6a0572; text-align: center; margin-bottom: 20px; }
-    p { font-size: 16px; line-height: 1.6; }
+    h1 {
+      color: #6a0572;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -57,6 +68,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -64,7 +76,7 @@
   <div class="container">
     <h1>About Me</h1>
     <p>I am Grace Kitonyi, a Mathematician and MSc candidate in Mathematical Epidemiology, passionate about applying mathematics, data science, and cybersecurity to solve real-world challenges.</p>
-    <p>Experience: Lecturer, Data Analyst, Digital Champion, Project Contributor in Disease Modeling, Digital Transformation, and Risk Assessment.</p>
+    <p><strong>Experience:</strong> Lecturer, Data Analyst, Digital Champion, Project Contributor in Disease Modeling, Digital Transformation, and Risk Assessment.</p>
     <p>🔹 Areas of interest: Mathematical Modeling | Data Science | Cybersecurity | AI for Social Good | Research & Education</p>
   </div>
 </body>
