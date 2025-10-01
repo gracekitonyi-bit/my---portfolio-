@@ -7,26 +7,30 @@
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #6a11cb, #2575fc);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
       color: #fff;
       min-height: 100vh;
       overflow-x: hidden;
       margin: 0;
+      scroll-behavior: smooth;
     }
 
+    /* Nav bar */
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 50px;
-      background: rgba(0,0,0,0.3);
+      padding: 12px 50px;
+      background: rgba(0,0,0,0.5);
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
     }
-
     nav a {
       color: #fff;
       text-decoration: none;
@@ -35,12 +39,10 @@
       font-size: 16px;
       transition: color 0.3s, transform 0.3s;
     }
-
     nav a:hover {
       color: #ffdd59;
       transform: translateY(-3px);
     }
-
     .nav-photo {
       width: 50px;
       height: 50px;
@@ -48,26 +50,24 @@
       border: 2px solid #fff;
     }
 
+    /* Hero section */
     .hero {
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 100vh;
-      padding: 120px 50px 50px 50px; /* moved down below nav */
+      padding: 150px 50px 50px 50px; /* ensure clear space under nav */
     }
-
     .hero-text {
       max-width: 60%;
       animation: fadeInLeft 1.5s ease;
     }
-
     h1 {
       font-size: 48px;
-      color: #ffd700; /* brighter color for visibility */
+      color: #ffd700;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       margin: 0;
     }
-
     h2 {
       font-size: 24px;
       margin-top: 15px;
@@ -75,23 +75,30 @@
       min-height: 30px;
     }
 
-    .hero-img {
-      max-width: 300px;
+    /* Hero image */
+    .hero-photo {
+      max-width: 280px;
       border-radius: 50%;
       border: 5px solid #fff;
       animation: fadeInRight 1.5s ease;
     }
 
+    /* Animations */
     @keyframes fadeInLeft {
       from {opacity: 0; transform: translateX(-50px);}
       to {opacity: 1; transform: translateX(0);}
     }
-
     @keyframes fadeInRight {
       from {opacity: 0; transform: translateX(50px);}
       to {opacity: 1; transform: translateX(0);}
     }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
 
+    /* Button */
     .btn {
       display: inline-block;
       padding: 12px 25px;
@@ -103,12 +110,12 @@
       text-decoration: none;
       transition: background 0.3s, transform 0.3s;
     }
-
     .btn:hover {
       background: #ffd700;
       transform: scale(1.05);
     }
 
+    /* Mobile */
     @media screen and (max-width: 900px) {
       .hero {
         flex-direction: column;
@@ -130,6 +137,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
+      <a href="resources.html">Resources</a>
       <a href="contact.html">Contact</a>
     </div>
   </nav>
@@ -141,8 +149,8 @@
       <h2 id="specialization"></h2>
       <a class="btn" href="projects.html">See My Work</a>
     </div>
-    <div class="hero-img">
-      <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" alt="Grace Kitonyi" class="hero-img">
+    <div>
+      <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" alt="Grace Kitonyi" class="hero-photo">
     </div>
   </section>
 
