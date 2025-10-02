@@ -7,17 +7,19 @@
     body {
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #f6d365, #fda085);
-      color: #333;
       margin: 0;
       padding: 0;
+      color: #333;
     }
 
+    /* Navigation */
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 50px; /* slightly bigger padding */
-      background: rgba(0,0,0,0.6); /* darker for contrast */
+      flex-wrap: wrap; /* ensures nav links wrap on smaller screens */
+      padding: 15px 40px;
+      background: rgba(0,0,0,0.75);
       position: fixed;
       width: 100%;
       top: 0;
@@ -30,11 +32,14 @@
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 25px;
+      margin: 8px 15px;
       font-weight: bold;
       transition: color 0.3s;
     }
-    nav a:hover { color: #ffd700; }
+
+    nav a:hover {
+      color: #ffd700;
+    }
 
     .nav-photo {
       width: 50px;
@@ -43,25 +48,67 @@
       border: 2px solid #fff;
     }
 
+    /* Content Container */
     .container {
-      padding: 160px 50px 50px; /* increased top padding so text never overlaps nav */
+      padding: 160px 30px 50px;
       max-width: 1000px;
       margin: auto;
+      text-align: center;
     }
 
     h1 {
+      font-size: 36px;
       color: #6a0572;
-      text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     p {
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    /* Cards for interests/experience */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #fff;
+      color: #333;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card h3 {
+      color: #6a0572;
+      margin-bottom: 10px;
+    }
+
+    .emoji {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .container {
+        padding: 140px 20px 50px;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Navigation -->
   <nav>
     <img src="https://raw.githubusercontent.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports/main/passport%20photo.jpg" class="nav-photo" alt="Grace Kitonyi">
     <div>
@@ -73,11 +120,44 @@
     </div>
   </nav>
 
+  <!-- Main Content -->
   <div class="container">
     <h1>About Me</h1>
-    <p>I am Grace Kitonyi, a Mathematician and MSc candidate in Mathematical Epidemiology, passionate about applying mathematics, data science, and cybersecurity to solve real-world challenges.</p>
-    <p><strong>Experience:</strong> Lecturer, Data Analyst, Digital Champion, Project Contributor in Disease Modeling, Digital Transformation, and Risk Assessment.</p>
-    <p>🔹 Areas of interest: Mathematical Modeling | Data Science | Cybersecurity | AI for Social Good | Research & Education</p>
+    <p>
+      I am <strong>Grace Kitonyi</strong>, a Mathematician and MSc candidate in 
+      <em>Mathematical Epidemiology</em>, passionate about applying 
+      mathematics, data science, and cybersecurity to solve 
+      real-world challenges.
+    </p>
+    <p>
+      <strong>Experience:</strong> Lecturer, Data Analyst, Digital Champion, 
+      Project Contributor in <em>Disease Modeling</em>, 
+      <em>Digital Transformation</em>, and <em>Risk Assessment</em>.
+    </p>
+
+    <!-- Cards Section -->
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">📊</div>
+        <h3>Data Science</h3>
+        <p>Turning raw data into insights to drive informed decisions and impactful research.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🔐</div>
+        <h3>Cybersecurity</h3>
+        <p>Exploring digital risk assessment and building secure frameworks for safe systems.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🧮</div>
+        <h3>Mathematical Modeling</h3>
+        <p>Designing models to understand disease dynamics and guide effective control strategies.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🤖</div>
+        <h3>AI for Social Good</h3>
+        <p>Leveraging AI to develop innovative solutions in healthcare, security, and education.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
