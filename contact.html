@@ -17,6 +17,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap; /* ✅ Fix cutting issue */
       padding: 15px 50px;
       background: rgba(0,0,0,0.6);
       position: fixed;
@@ -30,7 +31,7 @@
     nav a {
       color: #fff;
       text-decoration: none;
-      margin-left: 25px;
+      margin: 8px 15px;
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -44,7 +45,7 @@
 
     /* Contact container */
     .container {
-      padding: 160px 50px 50px; /* pushed down to clear nav */
+      padding: 160px 50px 50px;
       max-width: 700px;
       margin: auto;
       background: #ffffffcc;
@@ -56,6 +57,7 @@
     h1 {
       text-align: center;
       color: #2c3e50;
+      margin-bottom: 20px;
     }
 
     form {
@@ -73,6 +75,12 @@
       border-radius: 8px;
       margin-bottom: 15px;
       font-size: 14px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+    input:focus, textarea:focus {
+      border: 1px solid #2980b9;
+      box-shadow: 0 0 6px rgba(41,128,185,0.4);
+      outline: none;
     }
 
     button {
@@ -83,9 +91,12 @@
       border-radius: 8px;
       font-size: 16px;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
-    button:hover { background: #1abc9c; }
+    button:hover {
+      background: #1abc9c;
+      transform: scale(1.05);
+    }
 
     .links {
       text-align: center;
@@ -93,9 +104,11 @@
     }
     .links a {
       color: #2980b9;
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
     }
     .links a:hover { color: #1abc9c; }
 
@@ -121,7 +134,7 @@
   <div class="container">
     <h1>Contact Me 📬</h1>
 
-    <!-- ✅ Working Formspree endpoint -->
+    <!-- ✅ Formspree endpoint -->
     <form action="https://formspree.io/f/xgvnoqgr" method="POST">
       <label for="name">Your Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -137,8 +150,8 @@
 
     <div class="links">
       <p>Or reach me directly:</p>
-      <a href="mailto:gracenzambalikitonyi@gmail.com">📧 Email</a>
-      <a href="https://www.linkedin.com/in/grace-kitonyi-88143429b">🔗 LinkedIn</a>
+      <a href="mailto:gracenzambalikitonyi@gmail.com" aria-label="Email Grace">📧 Email</a>
+      <a href="https://www.linkedin.com/in/grace-kitonyi-88143429b" aria-label="LinkedIn Profile">🔗 LinkedIn</a>
     </div>
   </div>
 </body>
