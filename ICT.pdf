@@ -1,0 +1,13 @@
+<div class="card">
+  <h3>Information Communication Technology</h3>
+  <p>Preview of the ICT book. Only the first part is visible, the rest is blurred. Click below to access the full book.</p>
+  
+  <!-- PDF Preview -->
+  <div class="pdf-preview">
+    <iframe src="https://docs.google.com/gview?url=https://github.com/gracekitonyi-bit/my---portfolio-/raw/main/Information%20Communication%20Technology-1%20(1).pdf&embedded=true" frameborder="0"></iframe>
+    <div class="blur-overlay"></div>
+  </div>
+
+  <!-- Link to full book -->
+  <a href="https://github.com/gracekitonyi-bit/my---portfolio-/raw/main/Information%20Communication%20Technology-1%20(1).pdf" target="_blank">Read Full Book</a>
+</div>
