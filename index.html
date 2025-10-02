@@ -52,12 +52,13 @@
 
     /* Hero section */
     .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100vh;
-      padding: 150px 50px 50px 50px; /* ensure clear space under nav */
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 150px 50px 50px 50px; /* already pushes content below nav */
+  min-height: 100vh;  /* instead of fixed height */
+}
+
     .hero-text {
       max-width: 60%;
       animation: fadeInLeft 1.5s ease;
