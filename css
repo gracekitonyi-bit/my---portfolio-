@@ -1,20 +1,7 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;   /* made padding slightly bigger */
-  background: rgba(0,0,0,0.7); /* darker for contrast */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-/* Push main content down so it's not cut by nav */
-.container {
-  padding: 150px 50px 50px 50px;  /* increased from 120px */
-  max-width: 1200px;
-  margin: auto;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding-top: 100px; /* 👈 Add this */
+  background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+  color: #333;
 }
