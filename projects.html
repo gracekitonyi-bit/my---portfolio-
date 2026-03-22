@@ -16,7 +16,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap; /* ensures full display on small screens */
+      flex-wrap: wrap;
       padding: 12px 50px;
       background: rgba(0,0,0,0.5);
       position: fixed;
@@ -55,7 +55,7 @@
 
     /* MAIN CONTAINER */
     .container {
-      padding: 140px 50px 60px; /* more top padding so nav never overlaps */
+      padding: 140px 50px 60px;
       max-width: 1200px;
       margin: auto;
     }
@@ -102,9 +102,26 @@
       color: #444;
     }
 
+    .project-card .tag {
+      display: inline-block;
+      background: #f0e6ff;
+      color: #6a0572;
+      border-radius: 6px;
+      font-size: 12px;
+      padding: 3px 8px;
+      margin: 3px 2px;
+    }
+
+    .project-card .btn-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
     .project-card a {
       display: inline-block;
-      margin-top: 15px;
       padding: 10px 18px;
       text-decoration: none;
       background-color: #6a0572;
@@ -117,6 +134,14 @@
     .project-card a:hover {
       background-color: #d7263d;
       transform: scale(1.05);
+    }
+
+    .project-card a.secondary {
+      background-color: #1a1a2e;
+    }
+
+    .project-card a.secondary:hover {
+      background-color: #16213e;
     }
 
     /* ANIMATIONS */
@@ -165,78 +190,131 @@
 
     <div class="projects-grid">
 
+      <!-- Survival Analysis Project — NEW -->
+      <div class="project-card">
+        <h3>📈 Parametric Survival Analysis — Rats Dataset</h3>
+        <p>
+          Full survival analysis pipeline applied to the <strong>rats dataset</strong> in R,
+          modelling time-to-tumour onset following carcinogenic treatment.
+          Covers Kaplan–Meier estimation, Cox regression, Weibull AFT modelling,
+          parametric model selection across 7 distributions, life function estimation,
+          and a shared gamma frailty model to account for litter clustering.
+        </p>
+        <p style="margin-top: 10px;">
+          <span class="tag">R</span>
+          <span class="tag">Survival Analysis</span>
+          <span class="tag">Weibull</span>
+          <span class="tag">Cox Regression</span>
+          <span class="tag">Frailty Model</span>
+          <span class="tag">flexsurv</span>
+          <span class="tag">survminer</span>
+        </p>
+        <p style="margin-top: 10px; font-size: 14px; color: #6a0572;">
+          <strong>Key result:</strong> Weibull model best fit (AIC = 578.21),
+          treated rats have 2× the tumour hazard of controls (HR = 2.21, p = 0.011)
+        </p>
+        <div class="btn-group">
+          <a href="https://rpubs.com/Grace_k/rats-survival-analysis" target="_blank">
+            📄 View Report on RPubs
+          </a>
+          <a href="https://github.com/walternyamutamba-svg/rats-survival-analysis"
+             target="_blank" class="secondary">
+            💻 View Code on GitHub
+          </a>
+        </div>
+      </div>
+
       <!-- Diabetes Project -->
       <div class="project-card">
         <h3>Mathematical Modeling of Diabetes</h3>
         <p>Simulation and evaluation of diabetes progression using applied mathematics and computational techniques. This tool allows you to explore how various factors affect diabetes progression.</p>
-        <a href="https://interactive-diabetes-simulator-enhzsjwfdgkzknx8cj8bml.streamlit.app/" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://interactive-diabetes-simulator-enhzsjwfdgkzknx8cj8bml.streamlit.app/" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- Cyber Risk Quant Dashboard Project -->
       <div class="project-card">
         <h3>Cyber Risk Quant Dashboard</h3>
         <p>An interactive dashboard for cyber risk quantification. It uses Monte Carlo simulations to estimate risks and provides a cost-effectiveness analysis with ROI/ROSI metrics. The app can be used to visualize annual loss distributions and evaluate security controls.</p>
-        <a href="https://cyber-risk-quant-dashboard-inkqfw8fenncu5cfz75xup.streamlit.app/" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://cyber-risk-quant-dashboard-inkqfw8fenncu5cfz75xup.streamlit.app/" target="_blank">View Project</a>
+        </div>
       </div>
 
-      <!-- Cyber Security Internship - Future Interns Project -->
+      <!-- Cyber Security Internship -->
       <div class="project-card">
         <h3>Cyber Security Internship – Future Interns</h3>
-        <p>Hands-on security projects performed as part of the Future Interns program, covering tasks like vulnerability assessment, phishing detection, and API security evaluation. The repository showcases practical tasks done using various cybersecurity tools.</p>
-        <a href="https://github.com/gracekitonyi-bit/FUTURE_CS_01" target="_blank">View Project</a>
+        <p>Hands-on security projects performed as part of the Future Interns program, covering tasks like vulnerability assessment, phishing detection, and API security evaluation.</p>
+        <div class="btn-group">
+          <a href="https://github.com/gracekitonyi-bit/FUTURE_CS_01" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- Automated Web Vulnerability Scanner -->
       <div class="project-card">
         <h3>Automated Web Vulnerability Scanner</h3>
         <p>Cybersecurity tool scanning websites for vulnerabilities based on OWASP Top 10 standards.</p>
-        <a href="https://github.com/gracekitonyi-bit/vulnerability-Scanner-and-Pentester" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://github.com/gracekitonyi-bit/vulnerability-Scanner-and-Pentester" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- Python Data Science Notebooks -->
       <div class="project-card">
         <h3>Python Data Science Notebooks</h3>
         <p>Projects in Python for data analysis, visualization, and machine learning applications.</p>
-        <a href="https://github.com/gracekitonyi-bit/Digital-Shelf" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://github.com/gracekitonyi-bit/Digital-Shelf" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- R Programming Projects -->
       <div class="project-card">
         <h3>R Programming Projects</h3>
         <p>Statistical modeling and analysis using R, including applied research projects.</p>
-        <a href="https://github.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://github.com/gracekitonyi-bit/gracekitonyi-bit-daily-reports" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- LaTeX & Scientific Writing -->
       <div class="project-card">
         <h3>LaTeX & Scientific Writing</h3>
         <p>Documentation, reports, and professional formatting for scientific projects using LaTeX.</p>
-        <a href="https://github.com/gracekitonyi-bit/pentest-lab-backend" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://github.com/gracekitonyi-bit/pentest-lab-backend" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- Linux & System Programming -->
       <div class="project-card">
         <h3>Linux & System Programming</h3>
         <p>Command-line tools, shell scripting, and system-level programming projects in Linux.</p>
-        <a href="https://github.com/gracekitonyi-bit/vulnerability-Scanner-and-Pentester" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://github.com/gracekitonyi-bit/vulnerability-Scanner-and-Pentester" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- Cipher Game -->
       <div class="project-card">
         <h3>Cipher Game</h3>
         <p>Interactive cipher-based game for learning cryptography and encryption techniques.</p>
-        <a href="https://gracekitonyi-bit.github.io/cipher-game/" target="_blank">View Project</a>
+        <div class="btn-group">
+          <a href="https://gracekitonyi-bit.github.io/cipher-game/" target="_blank">View Project</a>
+        </div>
       </div>
 
       <!-- Password Strength Checker -->
       <div class="project-card">
         <h3>Password Strength Checker</h3>
-        <p>Tool to evaluate the strength of passwords using different criteria and security rules. This interactive tool helps users assess the strength of their passwords.</p>
-        <a href="https://gracekitonyi-bit.github.io/password-strength-checker/" target="_blank">View Project</a>
+        <p>Tool to evaluate the strength of passwords using different criteria and security rules.</p>
+        <div class="btn-group">
+          <a href="https://gracekitonyi-bit.github.io/password-strength-checker/" target="_blank">View Project</a>
+        </div>
       </div>
 
     </div>
-
   </div>
 
 </body>
